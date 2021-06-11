@@ -1,0 +1,23 @@
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+START TRANSACTION;
+SET time_zone = "+00:00";
+
+DROP TABLE IF EXISTS `Hotel`;
+CREATE TABLE IF NOT EXISTS `Hotel` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `adresse` varchar(255) DEFAULT NULL,
+  `nom` varchar(50) DEFAULT NULL,
+  `telephone` varchar(50) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
+
+DROP TABLE IF EXISTS `Directeur`;
+CREATE TABLE IF NOT EXISTS `Directeur` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `nom` varchar(50) DEFAULT NULL,
+  `prenom` varchar(50) DEFAULT NULL,
+  `hotel_id` int(11) DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `FK7s0pphqt1sn6j2orb3lcp7eo4` (`hotel_id`)
+) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
+
